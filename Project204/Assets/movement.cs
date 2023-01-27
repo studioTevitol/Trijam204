@@ -29,7 +29,7 @@ public class movement : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed).normalized;
     }
     void ProcessInputs()
     {
@@ -38,4 +38,5 @@ public class movement : MonoBehaviour
 
         moveDirection = new Vector2(moveX, moveY);
     }
+
 }
